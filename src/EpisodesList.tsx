@@ -2,7 +2,8 @@ import React from 'react'
 import { IEpisode, IEpisodeProps } from './interfaces'
 
 function EpisodesList(props: IEpisodeProps): JSX.Element[] {
-  const { episodes, toggleFavAction, favorites } = props
+  const { episodes, store, toggleFavAction, favorites } = props
+  const { state, dispatch } = store
 
   return episodes.map((episode: IEpisode) => {
     return (
@@ -11,7 +12,10 @@ function EpisodesList(props: IEpisodeProps): JSX.Element[] {
         <div>{episode.name}</div>
         <section className="episode-info">
           Season: {episode.season} Number: {episode.number}
-          <button type="button" onClick={() => toggleFavAction(episode)}>
+          <button
+            type="button"
+            onClick={() => toggleFavAction(state, dispatch, episode)}
+          >
             {favorites.find((fav: any) => fav.id === episode.id)
               ? 'Unfav'
               : 'Fav'}

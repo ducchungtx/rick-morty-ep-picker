@@ -24,6 +24,7 @@ export interface IState {
 
 export interface IEpisodeProps {
   episodes: IEpisode[]
-  toggleFavAction: (episode: IEpisode) => IAction
+  store: { state: IState; dispatch: any }
+  toggleFavAction: (state: IState, dispatch: any, episode: IEpisode) => IAction
   favorites: IEpisode[]
 }
