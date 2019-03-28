@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import { StoreProvider } from './Store'
-import HomePage from './HomePage'
-import FavsPage from './FavsPage'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(

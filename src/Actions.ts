@@ -1,6 +1,6 @@
-import { IState, IAction, IEpisode } from './interfaces'
+import { IState, IAction, IEpisode, Dispatch } from './interfaces'
 
-export const fetchDataAction = async (dispatch: any): Promise<any> => {
+export const fetchDataAction = async (dispatch: Dispatch): Promise<any> => {
   const URL =
     'https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes'
   const data = await fetch(URL)
@@ -13,17 +13,17 @@ export const fetchDataAction = async (dispatch: any): Promise<any> => {
 
 export const toggleFavAction = (
   state: IState,
-  dispatch: any,
+  dispatch: Dispatch,
   episode: IEpisode
-): IAction => {
+): void => {
   const episodeInFav: Boolean = state.favorites.includes(episode)
-  const favoritesWithoutEpisode: IEpisode[] = state.favorites.filter(
+  const favoritesWithoutEpisode: Array<IEpisode> = state.favorites.filter(
     (fav: any) => fav.id !== episode.id
   )
 
   const addFav = {
     type: 'ADD_FAV',
-    payload: episode,
+    payload: [episode],
   }
   const removeFav = {
     type: 'REMOVE_FAV',
