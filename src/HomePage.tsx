@@ -40,7 +40,7 @@ const HomePage = (): JSX.Element => {
     return episodeInFav ? dispatch(removeFav) : dispatch(addFav)
   }
 
-  const props = {
+  const props: IEpisodeProps = {
     episodes: state.episodes,
     toggleFavAction,
     favorites: state.favorites,
