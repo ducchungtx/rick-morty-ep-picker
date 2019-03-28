@@ -22,10 +22,10 @@ const App = (props: any): JSX.Element => {
           <h1>Rick & Morty</h1>
           <p>Pick your favorite episode!</p>
         </div>
-        <div>
+        <nav>
           <A href="/">Home</A>
           <A href="/favs">Favorite(s): {state.favorites.length}</A>
-        </div>
+        </nav>
       </header>
       {routeResult || <NotFound />}
       {props.children}

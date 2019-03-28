@@ -8,9 +8,9 @@ const EpisodeList = React.lazy<any>(() => import('./EpisodesList'))
 const HomePage = (): JSX.Element => {
   const { state, dispatch } = React.useContext(Store)
 
-  React.useEffect(() => {
-    state.episodes.length === 0 && fetchDataAction(dispatch)
-  })
+  React.useEffect((): void => {
+    fetchDataAction(dispatch)
+  }, [])
 
   const props: IEpisodeProps = {
     episodes: state.episodes,
@@ -18,6 +18,7 @@ const HomePage = (): JSX.Element => {
     toggleFavAction,
     favorites: state.favorites,
   }
+
   return (
     <React.Fragment>
       <React.Suspense fallback={<div>...loading</div>}>
