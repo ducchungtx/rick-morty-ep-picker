@@ -1,14 +1,22 @@
 import { IState, IAction, IEpisode, Dispatch } from './interfaces'
 
 export const fetchDataAction = async (dispatch: Dispatch): Promise<any> => {
-  const URL =
-    'https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes'
-  const data = await fetch(URL)
-  const dataJSON = await data.json()
-  return dispatch({
-    type: 'FETCH_DATA',
-    payload: dataJSON._embedded.episodes,
-  })
+  try {
+    const URL =
+      'https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes'
+    const response = await fetch(URL)
+    if (response.ok) {
+      const data = await response.json()
+      return dispatch({
+        type: 'FETCH_DATA',
+        payload: data._embedded.episodes,
+      })
+    } else {
+      throw new Error('Network response was not ok.')
+    }
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 export const toggleFavAction = (
