@@ -2,6 +2,10 @@
 
 > React TypeScript app with Hooks, Context, and hookrouter
 
+## Demo
+
+The live demo is available at [GitHub Pages](https://sophiabrandt.github.io/rick-morty-ep-picker).
+
 ## Tech Stack
 
 **Built with**
@@ -9,6 +13,7 @@
 - React 16.8.5
 - TypeScript
 - [hookrouter](https://github.com/Paratron/hookrouter)
+- [minireset.css](https://jgthms.com/minireset.css/)
 
 ## Features & Motivation
 
@@ -44,6 +49,12 @@ or
 
 ```
 $ yarn start
+```
+
+You can find the app under
+
+```
+http://localhost:3000/rick-morty-ep-picker/
 ```
 
 ## Licence
