@@ -6,8 +6,8 @@ import { Store } from './Store'
 import { useRoutes, A } from 'hookrouter'
 
 const routes = {
-  '/': () => <HomePage />,
-  '/favs': () => <FavsPage />,
+  '/rick-morty-ep-picker/': () => <HomePage />,
+  '/rick-morty-ep-picker/favs': () => <FavsPage />,
 }
 
 const App = (props: any): JSX.Element => {
@@ -23,8 +23,10 @@ const App = (props: any): JSX.Element => {
           <p>Pick your favorite episode!</p>
         </div>
         <nav>
-          <A href="/">Home</A>
-          <A href="/favs">Favorite(s): {state.favorites.length}</A>
+          <A href="/rick-morty-ep-picker/">Home</A>
+          <A href="/rick-morty-ep-picker/favs">
+            Favorite(s): {state.favorites.length}
+          </A>
         </nav>
       </header>
       {routeResult || <NotFound />}
