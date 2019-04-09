@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/rick-morty-ep-picker/static/js/0.310686b2.chunk.js"
   },
   {
-    "revision": "a87b27de2d564d0d4dfd",
+    "revision": "bb53424e9e5bf972a860",
     "url": "/rick-morty-ep-picker/static/css/main.833bfcc5.chunk.css"
   },
   {
-    "revision": "a87b27de2d564d0d4dfd",
-    "url": "/rick-morty-ep-picker/static/js/main.a84a5742.chunk.js"
+    "revision": "bb53424e9e5bf972a860",
+    "url": "/rick-morty-ep-picker/static/js/main.6b963671.chunk.js"
   },
   {
     "revision": "0459edc24e12eadd6b46",
     "url": "/rick-morty-ep-picker/static/js/runtime~main.3ce38c39.js"
   },
   {
-    "revision": "5de8c200fc8ae25c3638",
-    "url": "/rick-morty-ep-picker/static/js/3.1f052622.chunk.js"
+    "revision": "a716aa86f7b29774d538",
+    "url": "/rick-morty-ep-picker/static/js/3.a6d1a24b.chunk.js"
   },
   {
-    "revision": "d8b2136eca9a734061443633af052a70",
+    "revision": "6d67c87a98be8fd157c04e2be90ae154",
     "url": "/rick-morty-ep-picker/index.html"
   }
 ];
