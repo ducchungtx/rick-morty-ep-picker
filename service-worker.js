@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rick-morty-ep-picker/precache-manifest.5954cb50b5b08c25347f0079b991b0e6.js"
+  "/rick-morty-ep-picker/precache-manifest.885e7a052fd972239bfcf5d0a2773a8a.js"
 );
 
 workbox.clientsClaim();
